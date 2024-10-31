@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra-Modern Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body
+  class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen transition-all duration-500 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
+  <div class="relative">
+    <div id="navabar"></div>
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        class="absolute left-1/3 top-1/4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse-slow">
+      </div>
+      <div
+        class="absolute right-1/3 bottom-1/4 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse-slow animation-delay-2000">
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center min-h-screen">
+      <div
+        class="relative bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-2xl shadow-2xl p-8 max-w-md w-full animate-fade-in-up m-4">
+        <h2 class="text-4xl font-extrabold mb-6 text-white text-center">
+          <div id="app_name"></div>
+          Log Out
+        </h2>
+        <div>
+          <button id="logout"
+            class="w-full py-3 px-4 bg-white text-purple-600 font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:bg-opacity-90">
+            click
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/logout.js" type="module"></script>
+  <script src="./js/navbar-script.js" type="module"></script>
+</body>
+
+</html>
+
+<!-- name, address, phone number -->

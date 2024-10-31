@@ -1,0 +1,157 @@
+DIV.game-container {
+    font-family: Arial;
+}
+DIV.game-container > DIV {
+    float: left;
+}
+DIV.game-container::after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+DIV.board {
+    width: 800px;
+    border: 4px solid brown;
+}
+DIV.checker {
+    float: left;
+    width: 40px;
+    height: 40px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 50px;
+}
+DIV.red {
+    background: white;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+DIV.black {
+    background: black;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+DIV.checker-container {
+    float: left;
+    width: 45px;
+    height: 300px;
+    padding: 4px;
+}
+DIV.checker-container.valid-source:hover {
+    background: green;
+    cursor: pointer;
+}
+DIV.checker-container.valid-source:active,
+DIV.checker-container.valid-source.selected {
+    background: darkgreen;
+}
+DIV.checker-container.valid-destination {
+    background: yellow;
+    cursor: pointer;
+}
+DIV.checker-container.valid-destination:hover {
+    background: gold;
+}
+DIV.checker-container.valid-destination:active {
+    background: goldenrod;
+}
+DIV.bar {
+    background: brown;
+}
+DIV.home {
+    border: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+DIV.home.checker-container-top {
+    border-left: 4px solid brown;
+}
+DIV.home.checker-container-bottom {
+    border-right: 4px solid brown;
+}
+DIV.checker-container-bottom, DIV.checker-container-bottom > DIV {
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+}
+DIV.checker-container-top {
+    /*
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 100px solid;
+    */
+}
+DIV.point-red {
+    background: #F99;
+    border-top-color: #F99;
+    border-bottom-color: #F99;
+}
+DIV.point-black {
+    background: #999;
+    border-top-color: #999;
+    border-bottom-color: #999;
+}
+BR.clear {
+    clear: both;
+}
+
+DIV.side-container {
+    background: lightgray;
+}
+DIV.dice-container.active > DIV.die {
+    box-shadow: 0 0 100px yellow;
+}
+DIV.dice-container.dice-container-black > DIV.die {
+    background: black;
+    color: white;
+}
+DIV.dice-container.dice-container-red > DIV.die {
+    background: white;
+    color: black;
+}
+DIV.dice-container DIV.die {
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 5px;
+    float: left;
+}
+DIV.dice-container DIV.die.die-uses-0 {
+    opacity: 0.3;
+}
+DIV.dice-container DIV.die.die-uses-1, DIV.dice-container DIV.die.die-uses-2 {
+    opacity: 1.0;
+}
+DIV.dice-container DIV.die.die-uses-2::after {
+    content: 'x2';
+    font-size: x-small;
+}
+DIV.status-container {
+    height: 144px;
+    overflow-y: scroll;
+    float: left;
+    margin: 8px 2px;
+    width: 100px;
+}
+DIV.status-container::-webkit-scrollbar {
+    width: 1em;
+}
+DIV.status-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+DIV.status-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.highlight {
+    text-shadow: 0px 0px 20px white;
+}
+.highlight.highlight-end {
+    transition: all 1s ease-in-out;
+    text-shadow: inherit;
+}

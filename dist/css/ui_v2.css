@@ -1,0 +1,116 @@
+.game-container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+.board {
+  width: fit-content;
+
+}
+.checker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+.red {
+  background-color: white;
+  color: black;
+}
+.black {
+  background-color: black;
+}
+.checker-container {
+  width: 55px;
+  height: 250px;
+  padding: 4px;
+  display: inline-block;
+}
+.checker-container.valid-source:hover {
+  background-color: green;
+  cursor: pointer;
+}
+.checker-container.valid-source:active,
+.checker-container.valid-source.selected {
+  background-color: darkgreen;
+}
+.checker-container.valid-destination {
+  background-color: yellow;
+  cursor: pointer;
+}
+.checker-container.valid-destination:hover {
+  background-color: gold;
+}
+.checker-container.valid-destination:active {
+  background-color: goldenrod;
+}
+.bar {
+  background-color: brown;
+}
+.home {
+  padding: 0 2px;
+  border: none;
+}
+.home.checker-container-top {
+  border-left: 4px solid brown;
+}
+.home.checker-container-bottom {
+  border-right: 4px solid brown;
+  transform: rotate(180deg);
+}
+.point-red {
+  background-color: #F99;
+}
+.point-black {
+  background-color: #999;
+}
+.side-container {
+  background-color: lightgray;
+}
+.dice-container.active > .die {
+  box-shadow: 0 0 100px yellow;
+}
+.dice-container.dice-container-black > .die {
+  background-color: black;
+  color: white;
+}
+.dice-container.dice-container-red > .die {
+  background-color: white;
+  color: black;
+}
+.die {
+  width: 20px;
+  height: 20px;
+  border-radius: 8px;
+  padding: 6px;
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.die.die-uses-0 {
+  opacity: 0.3;
+}
+.die.die-uses-1, .die.die-uses-2 {
+  opacity: 1;
+}
+.die.die-uses-2::after {
+  content: 'x2';
+  font-size: x-small;
+}
+.status-container {
+  height: 144px;
+  overflow-y: auto;
+  margin: 8px 2px;
+  width: 100px;
+  scrollbar-width: thin;
+  scrollbar-color: darkgrey slategrey;
+}
+.highlight {
+  text-shadow: 0px 0px 20px white;
+  transition: all 1s ease-in-out;
+}
